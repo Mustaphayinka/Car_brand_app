@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Brand Predictor App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  </head>
+  <body>
+
+    <!--header-->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="text-success">Car Brand Predictor</h1>
+        <p class="font-weight-bold font-italic">Predict The Brand of A Car: A Deep Learning Web Application Built With FLask</p>
+      </div>
+    </div>
+
+
+
+    <div class="container text-center" style="font-size:1.5rem">
+      <img class="rounded" src="{{url_for('static', filename = 'file.jpg')}}" alt="image">
+      <p class="font-weight-bold">PREDICTION</p>
+      {% if prediction == 0 %}
+      <p class="font-weight-bold">The Car is An Audi</p>
+
+      {% elif prediction == 1 %}
+      <p class="font-weight-bold">The Car is A Lamborghini</p>
+
+      {% elif prediction == 2 %}
+      <p class="font-weight-bold">The Car is A Mercedes</p>
+
+      {% endif %}
+    </div>
+
+    <br>
+
+    <div class="container text-center">
+      <a href="/" class="btn text-success" style="border:2px solid">HOME</a>
+    </div>
+
+    <br>
+    <br>
+
+
+
+
+    <footer class="page-footer font-small">
+      <!-- Footer Elements -->
+      <div class="container">
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/yinka-mustapha-yusuf-1b607419b" class="btn-floating btn-li mx-1" target="_blank">
+              <i class="fab fa-linkedin-in  fa-2x text-success"> </i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/Mustaphayinka" class="btn-floating btn-dribbble mx-1" target="_blank">
+              <i class="fab fa-github  fa-2x text-success"></i></a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+      </div>
+      <!-- Footer Elements -->
+    </footer>
+
+  </body>
+</html>
+
+<!--https://medium.com/@mrgarg.rajat/implementing-stackgan-using-keras-a0a1b381125e -->
