@@ -14,8 +14,6 @@ from flask import Flask, redirect, url_for, request, render_template
 # Define a flask app
 app = Flask(__name__)
 
-app.config ['SEND_FILE_MAX_AGE_DEFAULT'] = 1
-
 @app.route('/', methods=['GET'])
 def index():
     # Main page
