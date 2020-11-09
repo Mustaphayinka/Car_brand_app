@@ -34,7 +34,7 @@ def predict():
 
         img.save('static/file.jpg')
 
-        img = image.load_img('static/file.jpg', target_size = (100,100))
+        img = image.load_img('static/file.jpg', target_size = (224,224))
 
         x = image.img_to_array(img)
 
