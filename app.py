@@ -25,7 +25,7 @@ def index():
 def predict():
     if request.method == 'POST':
         # Get the file from post request
-        MODEL_PATH ='model4.h5'
+        MODEL_PATH ='model.h5'
 
         # Load your trained model
         model = load_model(MODEL_PATH)
